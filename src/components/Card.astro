@@ -1,4 +1,5 @@
 ---
+import Info from './Info.astro';
 import Logo from './Logo.astro';
 
 interface Props {
@@ -11,7 +12,8 @@ const { href, title, body } = Astro.props;
 ---
 <main>
 	<div>
-		<Logo></Logo>
+		<Logo class="logo"></Logo>
+		<Info></Info>
 
 	</div>
 </main>
@@ -25,7 +27,9 @@ const { href, title, body } = Astro.props;
 	}
 	div{
 		position: relative;
-		display: flex;		
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 		background-color: var(--bg);
 		width: 62.5rem;
 		height: 25rem;
@@ -33,10 +37,12 @@ const { href, title, body } = Astro.props;
 		box-shadow: 
 			-20px -20px 70px rgb(255, 255, 255),
 			10px 10px 70px rgba(0, 0, 0, 0.2);
+		padding: 1rem;
 
 	}
-	logo {
-		transform: rotate(90deg);
+	.logo {
+		height: 10%;
+		transform: rotate(270deg);
 	}
 
 </style>
