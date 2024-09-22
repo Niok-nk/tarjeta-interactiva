@@ -4,12 +4,13 @@ import Card from '../components/Card.astro';
 import Info from '../components/Info.astro';
 import InfoBody from '../components/Info_body.astro';
 import Logo from '../components/Logo.astro';
+import Grafica from '../components/grafica.astro';
 ---
 
 <Layout title="Tarjeta de presentación interactiva">
 
 	<Card>
-		<Logo slot="info" class="logo"></Logo>
+		<Logo slot="logo" class="logo"></Logo>
 		<Info 
 			slot="info"
 			link="/foto_directora.webp"
@@ -18,14 +19,18 @@ import Logo from '../components/Logo.astro';
 		>
 			<InfoBody 
 			title="Teléfono:"
-			content="+34 600 123 456">
+			content="+34 600 123 456"></InfoBody>
 			<InfoBody 
 			title="Email:"
-			content="carla@boldimpact.com">
+			content="carla@boldimpact.com"></InfoBody>
 			<InfoBody 
 			title="Sitio web:"
-			content="www.boldimpact.com">		
+			content="www.boldimpact.com"></InfoBody>	
 		</Info>
+		<Grafica
+			slot="grafica"
+			class="grafica"
+		></Grafica>
 
 	</Card>
 
@@ -44,6 +49,10 @@ import Logo from '../components/Logo.astro';
 	.logo {
 		height: 70%;
 		margin: 2.2rem;			
+	}
+	.grafica{
+		height: 70%;
+		margin: 1rem;
 	}
 	
 </style>

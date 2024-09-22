@@ -7,5 +7,18 @@ interface Props {
 
 const { title, content} = Astro.props;
 ---
+<div>
+<p><strong>{title}</strong></p>
+<p>{content}</p>
+</div>
 
-<p><strong>{title}</strong>{content}</p>
+<style>
+    div{
+        display: flex;
+        flex-direction: row;
+        p strong{
+            display: inline;
+            margin-right: 10px;
+        }
+    }
+</style>
