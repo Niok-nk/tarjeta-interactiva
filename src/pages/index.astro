@@ -1,17 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Info from '../components/Info.astro';
+import InfoBody from '../components/Info_body.astro';
+import Logo from '../components/Logo.astro';
 ---
 
 <Layout title="Tarjeta de presentación interactiva">
 
-		<Card
-		title='4546'
-		href='kadfa'
-		body='asdfadf'
+	<Card>
+		<Logo slot="info" class="logo"></Logo>
+		<Info 
+			slot="info"
+			link="/foto_directora.webp"
+			title1="Carla Sánchez"
+			title2="Directora Creativa"
 		>
+			<InfoBody 
+			title="Teléfono:"
+			content="+34 600 123 456">
+			<InfoBody 
+			title="Email:"
+			content="carla@boldimpact.com">
+			<InfoBody 
+			title="Sitio web:"
+			content="www.boldimpact.com">		
+		</Info>
 
-		</Card>
+	</Card>
 
 </Layout>
 
@@ -24,6 +40,10 @@ import Card from '../components/Card.astro';
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+	}
+	.logo {
+		height: 70%;
+		margin: 2.2rem;			
 	}
 	
 </style>

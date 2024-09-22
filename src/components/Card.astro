@@ -2,18 +2,11 @@
 import Info from './Info.astro';
 import Logo from './Logo.astro';
 
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
-
-const { href, title, body } = Astro.props;
 ---
 <main>
 	<div>
-		<Logo class="logo"></Logo>
-		<Info></Info>
+		<slot name="logo" />
+		<slot name="info" />
 
 	</div>
 </main>
@@ -37,12 +30,11 @@ const { href, title, body } = Astro.props;
 		box-shadow: 
 			-20px -20px 70px rgb(255, 255, 255),
 			10px 10px 70px rgba(0, 0, 0, 0.2);
-		padding: 1rem;
+		padding: 1.5rem;
+		
+
 
 	}
-	.logo {
-		height: 10%;
-		transform: rotate(270deg);
-	}
+
 
 </style>
