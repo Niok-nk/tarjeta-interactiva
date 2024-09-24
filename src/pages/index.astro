@@ -4,7 +4,11 @@ import Card from '../components/Card.astro';
 import Info from '../components/Info.astro';
 import InfoBody from '../components/Info_body.astro';
 import Logo from '../components/Logo.astro';
-import Grafica from '../components/grafica.astro';
+import Grafica from '../components/Grafica.astro';
+import ContentA from '../components/Content_a.astro';
+import ContentB from '../components/Content_b.astro';
+import Button from '../components/button.astro';
+
 ---
 
 <Layout title="Tarjeta de presentación interactiva">
@@ -31,6 +35,25 @@ import Grafica from '../components/grafica.astro';
 			slot="grafica"
 			class="grafica"
 		></Grafica>
+		<ContentA 
+			slot="content"
+			title1="“El marketing tradicional es seguro, pero lo atrevido es lo que genera impacto. ¿Te atreves?”"
+			title2="Servicios destacados"
+		>
+			<ul>
+				<li>Estrategia de branding y rebranding</li>
+				<li>Campañas de marketing digital</li>
+				<li>Diseño web y experiencia de usuario (UX/UI)</li>
+				<li>Gestión de redes sociales</li>
+				<li>Producción audiovisual</li>
+			</ul>
+			<Button slot="footer">Ver Portafolio</Button>
+			<Button slot="footer">Solicita una consulta</Button>
+		</ContentA>
+		<ContentB 
+			slot="content"
+		></ContentB>
+
 
 	</Card>
 

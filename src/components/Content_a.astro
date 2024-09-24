@@ -1,0 +1,45 @@
+---
+import Button from "./button.astro";
+
+interface Props {
+	title1: string;
+    title2: string;	
+
+}
+
+const { title1, title2} = Astro.props;
+
+---
+
+<section>
+    <header>
+        <h1>{title1}</h1>
+
+    </header>
+    <div>
+        <h2>{title2}</h2>
+        <slot />
+        
+    </div>
+    <footer>
+        <slot name="footer" />
+    </footer>
+
+</section>
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        margin-bottom: 2rem;
+    }
+    div{
+        margin-bottom: 2rem;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+</style>
